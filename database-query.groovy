@@ -1,4 +1,7 @@
 pipeline {
+  options {
+   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '1')
+  }
   agent { label 'docker/mysql8-client'}
   environment {
     MYSQL_CREDS=credentials('mysql-user')
