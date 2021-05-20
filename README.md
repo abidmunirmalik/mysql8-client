@@ -8,5 +8,5 @@ docker build -t mysql8-client .
 
 # Run Container
 ```sh
-docker run -dit --rm --name mysql-client mysql8-client:latest
+docker run -it --rm --name mysql-client mysql8-client:latest /bin/bash
 ```
